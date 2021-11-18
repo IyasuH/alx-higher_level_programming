@@ -6,7 +6,11 @@ from calculator_1 import div
 
 
 def main():
-
+    """main function
+    vars:
+    a = first integer
+    b = second integer
+    """
     a = 10
     b = 5
     print("{} + {} = {}".format(a, b, add(a, b)))
