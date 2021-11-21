@@ -6,7 +6,7 @@ def no_c(my_string):
     b = list1.count("C")
     s = list1.count("c")
     c = s + b
-    t = n - c - 1
+    t = n - c - 2
     str1 = ""
     for i in range(t):
         if(list1[i] == 'c' or list1[i] == 'C'):
