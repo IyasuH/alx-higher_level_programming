@@ -8,9 +8,10 @@ def no_c(my_string):
     c = s + b
     t = n - c
     str1 = ""
-    for i in range(t):
-        if(list1[i] == 'c' or list1[i] == 'C'):
-            list1.pop(i)
+    if (my_string):
+        for i in range(t):
+            if(list1[i] == 'c' or list1[i] == 'C'):
+                list1.pop(i)
     for ele in list1:
         str1 += ele
     return (str1)
