@@ -12,6 +12,6 @@ def no_c(my_string):
         for i in range(t):
             if(list1[i] == 'c' or list1[i] == 'C'):
                 list1.pop(i)
-    for ele in list1:
-        str1 += ele
-    return (str1)
+        for ele in list1:
+            str1 += ele
+        return (str1)
