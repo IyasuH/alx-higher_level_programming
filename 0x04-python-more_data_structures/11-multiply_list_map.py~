@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+def multiply_list_map(my_list=[], number=0):
+    new_dict = my_list.copy()
+    new_dict.update((x, y*number) for x, y in new_dict.items())
+    return(new_dict)
