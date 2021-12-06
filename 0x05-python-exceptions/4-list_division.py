@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
     div = [None] * list_length
+    divR = [None] * list_length
     for i in range(list_length):
         try:
             div[i] = my_list_1[i]/my_list_2[i]
@@ -13,4 +14,6 @@ def list_division(my_list_1, my_list_2, list_length):
         except(IndexError):
             print("out of range")
             div[i] = 0
-    return (div)
+        finally:
+            divR = div
+    return(divR)
