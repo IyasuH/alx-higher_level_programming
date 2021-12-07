@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""documentation"""
 class Square:
-    def __init__(self):
-        pass
+    """documentation"""
+    pass
