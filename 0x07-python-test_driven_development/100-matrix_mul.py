@@ -2,12 +2,15 @@
 """
 Matrix multiplication
 """
+
+
 def matrix_mul(m_a, m_b):
     """Multipling two matrix
     Args:
         m_a the first matrix and it must contain elements of int or float
         m_b the second matrix and it must contain elementsof int or float
-    The column number of the first matrix must equal to the row of the second matrix.
+    The column number of the first matrix must
+       equal to the row of the second matrix.
     """
     if(type(m_a) is not list):
         raise TypeError("m_a must be a list")
@@ -47,6 +50,6 @@ def matrix_mul(m_a, m_b):
                     raise TypeError("each row of m_b must be of the same size")
                 if (m_f is not k_f):
                     raise ValueError("m_a and m_b can't be multiplied")
-                r[i][j] += m_a[i][k] * m_b[k][j] 
+                r[i][j] += m_a[i][k] * m_b[k][j]
 
     return(r)

@@ -3,6 +3,8 @@
 0-add_integer
 Adds two numbers
 """
+
+
 def add_integer(a, b=98):
     """ Adds two integer or float numbers(a, b) and return their result.
     Args:
@@ -15,7 +17,7 @@ def add_integer(a, b=98):
         a = int(a)
     else:
         raise TypeError("a must be an integer")
-    if (a == None and b == 98):
+    if (a is None and b == 98):
         raise TypeError("a must be an integer")
     if(type(b) == int):
         b = b

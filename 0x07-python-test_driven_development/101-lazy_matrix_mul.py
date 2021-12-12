@@ -4,6 +4,7 @@ Lazy matrix multiplication
 """
 import numpy as np
 
+
 def lazy_matrix_mul(m_a, m_b):
     """ Multiplies two matrices m_a and m_b
     Args:

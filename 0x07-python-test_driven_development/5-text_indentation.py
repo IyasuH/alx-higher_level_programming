@@ -2,8 +2,11 @@
 """
 Text indentation
 """
+
+
 def text_indentation(text):
-    """ Prints a text with 2 new lines afte each of these charachters '.' '?' and ':'
+    """ Prints a text with 2 new lines afte
+        each of these charachters '.' '?' and ':'
     Args:
         text: must be string otherwise raise TypeError
     """
@@ -12,7 +15,10 @@ def text_indentation(text):
     n = len(text)
     new = ""
     for c in range(n):
-        if (text[c-1] is '.' or text[c-1] is '?' or text[c-1] is ':' and text[c] is ' '):
+        if (text[c-1] is '.' or text[c-1] is '?' and text[c] is ' '):
+            new += '\n'
+            new += '\n'
+        elif (text[c-1] is ':' and text[c] is ' '):
             new += '\n'
             new += '\n'
         else:

@@ -3,6 +3,7 @@
 Max integer
 """
 
+
 def max_integer(list=[]):
     """To find maximum elment from the given list
     Args:
@@ -16,4 +17,3 @@ def max_integer(list=[]):
             if (i > high):
                 high = i
         return(high)
-
