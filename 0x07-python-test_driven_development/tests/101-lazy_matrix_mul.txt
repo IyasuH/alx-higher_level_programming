@@ -7,8 +7,42 @@ using ``lazy_matrix_mul``
 First import lazy_matrix_mul from 101-lazy_matrix_mul module:
 
       >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
       >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
       [[ 7 10]
        [15 22]]
       >>> print(lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
       [[13 16]]
+      >>> print(lazy_matrix_mul([[1, 2]], 10))
+      Traceback (most recent call last):
+      TypeError: m_b must be a list
+      >>> print(lazy_matrix_mul(10, [[3, 4], [5, 6]]))
+      Traceback (most recent call last):
+      TypeError: m_a must be a list
+      >>> print(lazy_matrix_mul([[1, 2]], [3, 4]))
+      Traceback (most recent call last):
+      TypeError: m_b must be a list of lists
+      >>> print(lazy_matrix_mul([1, 2], [[3, 4], [5, 6]]))
+      Traceback (most recent call last):
+      TypeError: m_a must be a list of lists
+      >>> print(lazy_matrix_mul([[1, 2]], [[]]))
+      Traceback (most recent call last):
+      ValueError: m_b can't be empty
+      >>> print(lazy_matrix_mul([[]], [[3, 4], [5, 6]]))
+      Traceback (most recent call last):
+      ValueError: m_a can't be empty
+      >>> print(lazy_matrix_mul([[1, 2]], [["hey", 4], [5, 6]]))
+      Traceback (most recent call last):
+      TypeError: m_b should contain only integers or floats
+      >>> print(lazy_matrix_mul([["hey", 2]], [[3, 4], [5, 6]]))
+      Traceback (most recent call last):
+      TypeError: m_a should contain only integers or floats
+      >>> print(lazy_matrix_mul([[1, 2]], [[3, 4], [5]]))
+      Traceback (most recent call last):
+      TypeError: each row of m_b must be of the same size
+      >>> print(lazy_matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]]))
+      Traceback (most recent call last):
+      TypeError: each row of m_a must be of the same size
+      >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2]]))
+      Traceback (most recent call last):
+      ValueError: m_a and m_b can't be multiplied
