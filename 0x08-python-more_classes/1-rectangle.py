@@ -6,10 +6,10 @@ class Rectangle:
     """Defines a class based on task number 0
     with private instance attribute width and height
     and this arttribute must be integer and must greater than 0"""
-    def __init__(self, width=0, height=0):
-        self._Rectangle__width = width
+    def __init__(self, height=0, width=0):
         self._Rectangle__height = height
-    
+        self._Rectangle__width = width
+
     @property
     def height(self):
         return self._Rectangle__height
