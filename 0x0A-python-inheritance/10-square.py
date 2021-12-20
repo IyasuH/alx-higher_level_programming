@@ -45,6 +45,6 @@ class Square(Rectangle):
         """inherits from rectangle(9-rectangle.py)
         Args:
             size - must be positve integer"""
-        self.integer_validator("size", size)
         self.__size = size
+        self.integer_validator("size", size)
         super().__init__(self.__size, self.__size)
