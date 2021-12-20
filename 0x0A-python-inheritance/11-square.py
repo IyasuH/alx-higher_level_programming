@@ -46,5 +46,10 @@ class Square(Rectangle):
         Args:
             size - must be positve integer"""
         self.__size = size
-        self.integer_validator("size", size)
-        super().__init__(self.__size, self.__size)
+        super().integer_validator("size", size)
+        super().__init__(size, size)
+        super().area()
+
+    def __str__(self):
+        """return string """
+        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
