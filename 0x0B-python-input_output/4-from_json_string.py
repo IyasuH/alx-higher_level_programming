@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import json
-from io import StringIO
 """From JSON string to object"""
 
 
