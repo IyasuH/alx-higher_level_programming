@@ -4,6 +4,7 @@
 
 class Student:
     """class that defines student"""
+
     def __init__(self, first_name, last_name, age):
         """instantiation"""
         self.first_name = first_name
