@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-"""module import"""
-import json
 """Class to json"""
 
 
@@ -10,4 +8,4 @@ def class_to_json(obj):
     serialization of an object
     Args:
         obj - is aninstance of a class"""
-    
+    return obj.__dict__
