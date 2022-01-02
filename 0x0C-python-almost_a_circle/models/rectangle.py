@@ -91,16 +91,18 @@ class Rectangle(Base):
                 self.__x = args[3]
             if i == 4:
                 self.__y = args[4]
-            if args[i] == None:
-                if kwargs is not None:
-                    for k, v in kwargs.iteritems():
-                        if k == id:
-                            self.id = v
-                        if k == width:
-                            self.width = v
-                        if k == height:
-                            self.height = v
-                        if k == x:
-                            self.x = v
-                        if k == y:
-                            self.y = v
+        if kwargs is not None:
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.id = kwargs.get(k)
+                if k == "width":
+                    self.__width = kwargs.get(k)
+                if k == "height":
+                    self.__height = kwargs.get(k)
+                if k == "x":
+                    self.__x = kwargs.get(k)
+                if k == "y":
+                    self.__y = kwargs.get(k)
+
+    def to_dictionary(self):
+        return {'id':self.id, 'width':self.__width, 'height':self.__height, 'x':self.__x, 'y':self.__y}
