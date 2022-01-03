@@ -10,7 +10,10 @@ test for models.square import Square
 
 
 class TestSquareInstDict(unittest.TestCase):
+    """Test for Square instance to dictionary
+    representation"""
     def t0_dictionary(self):
+        """Test on to_dictionary"""
         s1 = Square(10, 2, 1)
         d1 = s1.to_dictionary()
         self.assertIn('id', d1)

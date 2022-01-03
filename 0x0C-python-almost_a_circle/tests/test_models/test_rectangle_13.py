@@ -10,7 +10,10 @@ test for Rectangle instance to dictionary representation
 
 
 class TestRecInstDict(unittest.TestCase):
+    """Test on  Rectangle instance to dictionary
+    representation"""
     def test_to_dictionary(self):
+        """Test for to_dictionary func"""
         r1 = Rectangle(10, 2, 1, 9)
         d1 = r1.to_dictionary()
         self.assertIn('x', d1)

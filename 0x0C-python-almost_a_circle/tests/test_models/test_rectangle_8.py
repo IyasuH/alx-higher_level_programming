@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """
 import modules
@@ -10,7 +11,9 @@ test for update 0
 
 
 class testup(unittest.TestCase):
+    """Test for Update #0"""
     def test_update1(self):
+        """Test for update"""
         r1 = Rectangle(10, 10, 10, 10)
         a1 = '[Rectangle] (1) 10/10 - 10/10'
         self.assertEqual(r1.__str__(), a1)

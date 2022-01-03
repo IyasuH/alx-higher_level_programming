@@ -10,7 +10,9 @@ test square update
 
 
 class testSquareUpdate(unittest.TestCase):
+    """Test for Square update"""
     def test_update(self):
+        """Test for update"""
         s1 = Square(5)
         a1 = '[Square] (1) 0/0 - 5'
         self.assertEqual(s1.__str__(), a1)

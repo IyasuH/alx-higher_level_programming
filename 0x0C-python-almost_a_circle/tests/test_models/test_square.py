@@ -12,7 +12,9 @@ test for task 10 square
 
 
 class TestSquare(unittest.TestCase):
+    """Test for Square"""
     def test_square_10(self):
+        """Test for __init__ func"""
         s1 = Square(5)
         a1 = '[Square] (1) 0/0 - 5'
         self.assertEqual(s1.__str__(), a1)

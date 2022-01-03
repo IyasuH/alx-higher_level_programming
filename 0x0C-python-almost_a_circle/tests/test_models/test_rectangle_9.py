@@ -10,7 +10,9 @@ test for update#1
 
 
 class TestUp(unittest.TestCase):
+    """Tets for unsate#1"""
     def test_update1(self):
+        """Test for update"""
         r = Rectangle(10, 10, 10, 10)
         a = '[Rectangle] (1) 10/10 - 10/10'
         self.assertEqual(r.__str__(), a)

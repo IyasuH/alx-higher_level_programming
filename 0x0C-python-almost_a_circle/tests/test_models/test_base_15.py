@@ -11,7 +11,9 @@ test for  Dictionary to JSON string
 
 
 class TestDicToJson(unittest.TestCase):
+    """Test for  Dictionary to JSON string"""
     def t0_json_string(self):
+        """Test for to_json_string"""
         r1 = Rectangle(10, 7, 2, 8)
         d1 = r1.to_dictionary()
         t1 = type(d1)
