@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """import module"""
 from models.base import Base
-
 """Rectangle class that inherits from Base"""
 
 
 class Rectangle(Base):
     """Args:
            base - class """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Args:
                width - int : width of rectangle
@@ -16,10 +16,10 @@ class Rectangle(Base):
                y - int
                id - int
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         if (type(height) is not int):
             raise TypeError("height must be an integer")
         if (height <= 0):
@@ -37,7 +37,9 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
-        """To set the width of the rectangle"""
+        """To set the width of the rectangle
+        Args:
+            width"""
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -51,7 +53,9 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
-        """To set the height of rectangle"""
+        """To set the height of rectangle
+        Args:
+           height"""
         self.__height = height
 
     @property
@@ -61,7 +65,9 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
-        """To set the value of x"""
+        """To set the value of x
+        Args:
+            x"""
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -75,7 +81,9 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y):
-        """To set the value of y"""
+        """To set the value of y
+        Args:
+            y"""
         self.__y = y
 
     def area(self):
@@ -97,8 +105,8 @@ class Rectangle(Base):
     def __str__(self):
         """overriding the __str__ method so that it returns
         [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        return '[Rectangle] ({}) {}/{} - {}/{}'
-        .format(self.id, self.x, self.y, self.width, self.height)
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
+                                                       self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute or assign a
