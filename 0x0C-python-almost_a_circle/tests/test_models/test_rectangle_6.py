@@ -15,5 +15,6 @@ class test_str(unittest.TestCase):
         res = "[Rectangle] (12) 2/1 - 4/6"
         self.assertEqual(r.__str__(), res)
 
+
 if __name__ == '__main__':
     unittest.main()
