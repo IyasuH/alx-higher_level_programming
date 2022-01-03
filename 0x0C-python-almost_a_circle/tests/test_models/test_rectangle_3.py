@@ -10,7 +10,9 @@ test for validate sttributes task
 
 
 class TestRec3(unittest.TestCase):
+    """Test rectangle"""
     def test_validate(self):
+        """test validate attributes"""
         with self.assertRaises(TypeError):
             Rectangle(10, "3")
         with self.assertRaises(ValueError):

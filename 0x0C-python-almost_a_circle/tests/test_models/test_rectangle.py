@@ -10,8 +10,10 @@ test case for rectangle
 
 
 class TestRectangle(unittest.TestCase):
+    """tests for the rectangle model"""
 
     def test_first(self):
+        """Test for First Rectangle"""
         r1 = Rectangle(10, 2)
         self.assertAlmostEqual(r1.id, 1)
 
