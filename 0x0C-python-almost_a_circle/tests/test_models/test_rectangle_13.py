@@ -20,6 +20,7 @@ class TestRecInstDict(unittest.TestCase):
         self.assertIn('width', d1)
         t1 = type(d1)
         self.assertEqual(str(t1), '<class \'dict\'>')
-        
+
+
 if __name__ == "__main__":
     unittest.main()
