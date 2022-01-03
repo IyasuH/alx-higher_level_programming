@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """import module"""
 from models.rectangle import Rectangle
-
-
 """Square is class that inherit from Rectangle"""
+
+
 class Square(Rectangle):
     """Args:
            Rectangle - inherited class"""
@@ -13,7 +13,8 @@ class Square(Rectangle):
         self.width = size
 
     def __str__(self):
-        return '[Square] ({}) {}/{} - {}'.format(self.id, self.x, self.y, self.height)
+        return '[Square] ({}) {}/{} - {}'
+        .format(self.id, self.x, self.y, self.height)
 
     @property
     def size(self):
@@ -46,4 +47,4 @@ class Square(Rectangle):
                     self.y = kwargs.get(k)
 
     def to_dictionary(self):
-        return {'id':self.id, 'size':self.size, 'x':self.x, 'y':self.y}
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}

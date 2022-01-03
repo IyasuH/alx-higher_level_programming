@@ -2,8 +2,9 @@
 """import module"""
 from models.base import Base
 
-
 """Rectangle class that inherits from Base"""
+
+
 class Rectangle(Base):
     """Args:
            base - class """
@@ -77,7 +78,8 @@ class Rectangle(Base):
             print("\n", end="")
 
     def __str__(self):
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, self.y, self.width, self.height)
+        return '[Rectangle] ({}) {}/{} - {}/{}'
+        .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         for i in range(len(args)):
@@ -105,4 +107,5 @@ class Rectangle(Base):
                     self.__y = kwargs.get(k)
 
     def to_dictionary(self):
-        return {'id':self.id, 'width':self.__width, 'height':self.__height, 'x':self.__x, 'y':self.__y}
+        return {'id': self.id, 'width': self.__width, 'height':
+                self.__height, 'x': self.__x, 'y': self.__y}
