@@ -2,7 +2,6 @@
 """import modules"""
 import json
 import os
-
 """1 Base class"""
 
 
