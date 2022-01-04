@@ -43,8 +43,7 @@ class Base:
             with open(cls.__name__ + ".json", mode='w') as file1:
                 file1.write("[]")
         else:
-            for i in list_objs:
-                last_list = [i.to_dictionary()]
+            last_list = [i.to_dictionary() for i in list_objs]
             with open(cls.__name__ + ".json", mode='w') as file1:
                 file1.write(cls.to_json_string(last_list))
 
