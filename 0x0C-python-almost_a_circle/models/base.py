@@ -65,7 +65,11 @@ class Base:
         Args:
             **dictionary - used as **kwargs
         """
-        cls.__name__ == "Rectangle"
-        ret = cls(12, 4)
-        ret.update(**dictionary)
-        return ret
+        if cls.__name__ == "Rectangle":
+            rec = cls(12, 4)
+            rec.update(**dictionary)
+            return rec
+        if cls.__name__ == "Square":
+            sqr = cls(32)
+            sqr.update(**dictionary)
+            return sqr
