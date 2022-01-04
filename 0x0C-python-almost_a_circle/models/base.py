@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """import modules"""
 import json
+import os
 
 """1 Base class"""
 
@@ -73,3 +74,17 @@ class Base:
             sqr = cls(32)
             sqr.update(**dictionary)
             return sqr
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances
+        Or empty list if file doesn't exit"""
+        list_re = []
+        if os.path.isfile("cls.__name__") is True:
+            with open(cls.__name__ + ".json", mode='r') as file:
+                n = cls.from_json_string(file.read())
+            for i in n:
+                list_re.append(cls.create(**i))
+            return list_re
+        else:
+            return []
