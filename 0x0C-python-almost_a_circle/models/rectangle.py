@@ -20,14 +20,6 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        if (type(height) is not int):
-            raise TypeError("height must be an integer")
-        if (height <= 0):
-            raise ValueError("height must be > 0")
-        if type(y) is not int:
-            raise TypeError("y must be an integer")
-        if (y < 0):
-            raise ValueError("y must be > 0")
         super().__init__(id)
 
     @property
@@ -56,11 +48,15 @@ class Rectangle(Base):
         """To set the height of rectangle
         Args:
            height"""
+        if (type(height) is not int):
+            raise TypeError("height must be an integer")
+        if (height <= 0):
+            raise ValueError("height must be > 0")
         self.__height = height
 
     @property
     def x(self):
-        """To get the x value""" 
+        """To get the x value"""
         return self.__x
 
     @x.setter
@@ -84,6 +80,10 @@ class Rectangle(Base):
         """To set the value of y
         Args:
             y"""
+        if type(y) is not int:
+            raise TypeError("y must be an integer")
+        if (y < 0):
+            raise ValueError("y must be >= 0")
         self.__y = y
 
     def area(self):
@@ -105,8 +105,8 @@ class Rectangle(Base):
     def __str__(self):
         """overriding the __str__ method so that it returns
         [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
-                                                       self.x, self.y, self.width, self.height)
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, self.y,
+                                                       self.width, self.height)
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute or assign a
