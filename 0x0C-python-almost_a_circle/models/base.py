@@ -79,11 +79,12 @@ class Base:
         """Returns a list of instances
         Or empty list if file doesn't exit"""
         list_re = []
-        if os.path.isfile("cls.__name__") is True:
-            with open(cls.__name__ + ".json", mode='r') as file:
-                n = cls.from_json_string(file.read())
-            for i in n:
-                list_re.append(cls.create(**i))
-            return list_re
-        else:
-            return []
+        name = cls.__name__ + ".json"
+        try:
+            with open(name, mode='r') as file1:
+                list_re = cls.from_json_string(file1.read())
+            for i, e in enumerate(list_re):
+                list_re[i] = cls.create(**list_re[i])
+        except:
+            pass
+        return list_re
