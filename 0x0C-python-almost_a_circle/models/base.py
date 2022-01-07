@@ -2,6 +2,7 @@
 """import modules"""
 import json
 import os
+import csv
 """1 Base class"""
 
 
@@ -88,3 +89,44 @@ class Base:
         except:
             pass
         return list_re
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serialization"""
+        name = cls.__name__ + ".csv"
+        with open(name, mode='w') as file1:
+            write = csv.writer(file1)
+            if cls.__name__ == "Rectangle":
+                for n in list_objs:
+                    write.writerow([n.id, n.width,
+                                    n.height, n.x, n.y])
+            if cls.__name__ == "Square":
+                for n in list_objs:
+                    write.writerow([n.id, n.size,
+                                    n.x, n.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserialization"""
+        name = cls.__name__ + ".csv"
+        a = []
+        try:
+            with open(name, mode='r') as file1:
+                read = csv.read(file1)
+            for args in read:
+                if cls.__name__ == "Rectangle":
+                    dic = {"id": int(args[0]),
+                           "width": int(args[1]),
+                           "height": int(args[2]),
+                           "x": int(args[3]),
+                           "y": int(args[4])}
+                if cls.__name__ == "Square":
+                    dic = {"id": int(args[0]),
+                           "size": int(args[1]),
+                           "x": int(args[2]),
+                           "y": int(args[3])}
+                dictt = cls.create(**dic)
+                a.append(dictt)
+        except:
+            pass
+        return a

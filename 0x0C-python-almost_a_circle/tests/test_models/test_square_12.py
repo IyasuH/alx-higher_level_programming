@@ -4,6 +4,8 @@ import modules
 """
 import unittest
 from models.square import Square
+from models.base import Base
+import pep8
 """
 test square update
 """
@@ -11,8 +13,13 @@ test square update
 
 class testSquareUpdate(unittest.TestCase):
     """Test for Square update"""
+    def setUp(self):
+        """reset"""
+        Base._Base__nb_objects = 0
+
     def test_update(self):
         """Test for update"""
+        pep8style = pep8.StyleGuide(quite=True)
         s1 = Square(5)
         a1 = '[Square] (1) 0/0 - 5'
         self.assertEqual(s1.__str__(), a1)

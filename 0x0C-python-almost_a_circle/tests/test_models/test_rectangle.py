@@ -14,8 +14,8 @@ class TestRectangle(unittest.TestCase):
     """tests for the rectangle model"""
 
     def tearDown(self):
-        """
-        deleting created instances"""
+        """deleting created instances"""
+        Base._Base__nb_objects = 0
 
     def test_id(self):
         """Test for First Rectangle"""

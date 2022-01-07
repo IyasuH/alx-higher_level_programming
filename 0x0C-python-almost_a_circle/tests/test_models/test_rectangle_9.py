@@ -4,6 +4,8 @@ import modules
 """
 import unittest
 from models.rectangle import Rectangle
+import pep8
+from models.base import Base
 """
 test for update#1
 """
@@ -11,8 +13,13 @@ test for update#1
 
 class TestUp(unittest.TestCase):
     """Tets for unsate#1"""
+    def setUp(self):
+        """reset"""
+        Base._Base__nb_ = 0
+
     def test_update1(self):
         """Test for update"""
+        pep8Style = pep8.StyleGuide(quite=True)
         r = Rectangle(10, 10, 10, 10)
         a = '[Rectangle] (1) 10/10 - 10/10'
         self.assertEqual(r.__str__(), a)

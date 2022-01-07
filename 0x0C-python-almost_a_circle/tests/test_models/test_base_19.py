@@ -4,6 +4,7 @@ import modules
 """
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestFileToIn(unittest.TestCase):
@@ -11,6 +12,7 @@ class TestFileToIn(unittest.TestCase):
     def test_load_from_file(self):
         """Test for load_from_file"""
         r1 = Rectangle(10, 7, 2, 8)
+
 
 if __name__ == "__main__":
     unittest.main()
