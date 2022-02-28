@@ -3,11 +3,10 @@ const myVar = process.argv;
 let n;
 if (!isNaN(myVar[2])) {
   n = parseInt(myVar[2]);
-  if (n > 0)
-  {
-  while (n !== 0) {
-    console.log('C is fun');
-    n = n - 1;
+  if (n >= 0) {
+    while (n !== 0) {
+      console.log('C is fun');
+      n = n - 1;
     }
   }
 } else {
