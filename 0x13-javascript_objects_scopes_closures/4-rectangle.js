@@ -4,11 +4,12 @@ let m;
 let n;
 class Rectangle {
   print () {
+    const x = 'X';
     n = this.height;
     while (n !== 0) {
       m = this.width;
       while (m !== 0) {
-        o = o + 'X';
+        o = o + x;
         m = m - 1;
       }
       if (n > 1) {
