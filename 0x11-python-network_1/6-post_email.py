@@ -7,6 +7,5 @@ and finally displays the body of the response
 if __name__ == "__main__":
     import requests
     import sys
-    email = sys.argv[2]
-    x = requests.post(sys.argv[1], email)
+    x = requests.post(sys.argv[1], email=sys.argv[2])
     print(x.text)
