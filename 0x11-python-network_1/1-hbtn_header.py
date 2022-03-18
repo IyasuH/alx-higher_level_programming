@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import urllib
 import urllib.request
 import sys
 """
