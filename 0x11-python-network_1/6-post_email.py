@@ -7,6 +7,6 @@ and finally displays the body of the response
 if __name__ == "__main__":
     import requests
     import sys
-    email = {'Your email is': sys.argv[2]}
-    x = requests.post(sys.argv[1], data=email)
+    mail = {'Your email is': sys.argv[2]}
+    email = requests.post(sys.argv[1], data=mail)
     print(x.json())
