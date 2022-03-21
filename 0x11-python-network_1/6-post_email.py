@@ -9,4 +9,4 @@ if __name__ == "__main__":
     import sys
     mail = {'Your email is': sys.argv[2]}
     email = requests.post(sys.argv[1], data=mail)
-    print(x.json())
+    print(email.text)
