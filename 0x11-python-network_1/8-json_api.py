@@ -8,7 +8,7 @@ if __name__ == "__main__":
     import requests
     import sys
     url = 'http://0.0.0.0:5000/search_user'
-    if len(sys.argv) > 1: 
+    if len(sys.argv) > 1:
         q = requests.post(url, sys.argv[1])
     else:
         q = requests.post(url, "")
