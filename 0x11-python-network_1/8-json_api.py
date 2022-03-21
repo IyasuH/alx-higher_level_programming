@@ -9,7 +9,7 @@ if __name__ == "__main__":
     import sys
     url = 'http://0.0.0.0:5000/search_user'
     if sys.argv[1]:
-        q = request.post(url, sys.argv[1])
+        q = requests.post(url, sys.argv[1])
         j = q.json()
     else:
         q = ""
